@@ -1,0 +1,84 @@
+.inicio {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    margin: 0px;
+
+}
+
+body {
+    margin: 0px;
+}
+
+.imagen     { 
+    background-image:url("D.ALCE.png");
+    width: 320px;
+    height: 170px;
+    background-size: contain;
+    margin: 3px 250px 0 10px;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+
+.home {
+    margin: 26px 20px 0 20px;
+    height: 20px;
+}
+
+.servi {
+    margin: 26px 20px 0 20px;
+    height: 20px;
+}
+
+.noso {
+    margin: 26px 20px 0 20px;
+    height: 20px;
+}
+
+.gale {
+    margin: 26px 20px 0 20px;
+    height: 20px;
+}
+
+.contac {
+    margin: 26px 20px 0 20px;
+    height: 20px;
+}
+
+.contactanos {
+    background-image: url("contacto.png");
+    margin: 16px 10px 0 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 170px;
+
+}
+
+.imag {
+    border: solid;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOj3J5qIS2iz8igXOU9Pclkq356u6TyT10px38wxWaNg&s=10);
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.tercero {
+    border: solid;
+    width:100%;
+    height: 200px;
+}
+
+.cuarto {
+    border: solid;
+    width: 100%;
+    height: 300px;
+}
+
+.quinto {
+    border: solid;
+    width: 100%;
+    height: 200px;
+}
