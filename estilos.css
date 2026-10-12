@@ -69,7 +69,7 @@ img {
     min-height: 340px;
     padding: 32px clamp(20px, 5vw, 75px);
     background:
-        linear-gradient(to left,transparent, #111184),
+        linear-gradient(to right, rgba(10, 15, 75, .95), rgba(10, 15, 75, .45)),
         url("Silla.png") center / cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -151,13 +151,6 @@ span {
     max-width: 700px;
     font-size: clamp(16px, 2vw, 20px);
     line-height: 1.5;
-}
-
-.hero {
-    background-image: url("Silla.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .for {
