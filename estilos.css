@@ -153,6 +153,13 @@ span {
     line-height: 1.5;
 }
 
+.hero {
+    background-image: url("Silla.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .for {
     background-color: #75C3FF;
     border-radius: 10px;
