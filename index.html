@@ -1,116 +1,276 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidades Dentales</title>
-    <link rel="icon" href="sillon.png" type="image/png">
+    <meta name="description" content="D.ARCE: servicio técnico de unidades dentales y venta de compresoras odontológicas.">
+    <title>D.ARCE | Unidades dentales</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="inicio">  <div class="imagen"> </div> <div class="home">Inicio</div> <div class="servi">Servicios</div> <div class="noso">Nosotros</div> <div class="gale">Galeria</div> <div class="contac">Contacto</div> 
-    <a href="https://wa.me/51907082563" target="_blank"><div class="contactanos"></div></a>
-</div> </div>
 
-    <div class="imag">
-        <div class="tecnico">SERVICIO TÉCNICO ESPECIALIZADO</div>
-        <div class="reparacion">Reparación y mantenimiento de <span>unidades dentales</span></div>
-        <div class="soluciones">Soluciones rápidas, confiables y profesionales para que tu equipo siempre esté en funcionamiento.</div>
-    </div>
-    <div class="quinto">
-        <div class="cajota">
-            <div class="tec">Servicio Técnico de Unidad Dental en Lima </div>
-            <div class="mat">Mantenimiento, reparación y revision profesional de equipos odontológicos.
+    <!-- NAVEGACIÓN -->
+    <header class="inicio">
+        <a href="#inicio" class="imagen" aria-label="D.ARCE - Inicio"></a>
+
+        <nav class="menu">
+            <a class="home" href="#inicio">Inicio</a>
+            <a class="servi" href="#servicios">Servicios</a>
+            <a class="noso" href="#nosotros">Nosotros</a>
+            <a class="gale" href="#galeria">Galería</a>
+            <a class="contac" href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="https://wa.me/51907082563"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contactanos"
+           aria-label="Contactar por WhatsApp"></a>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="imag" id="inicio">
+            <p class="tecnico">SERVICIO TÉCNICO ESPECIALIZADO</p>
+
+            <h1 class="reparacion">
+                Reparación y mantenimiento de
+                <span>unidades dentales</span>
+            </h1>
+
+            <p class="soluciones">
+                Soluciones rápidas, confiables y profesionales
+                para que tu equipo siempre esté en funcionamiento.
+            </p>
+        </section>
+
+        <!-- LLAMADA A LA ACCIÓN -->
+        <section class="quinto">
+            <div class="cajota">
+                <h2 class="tec">
+                    Servicio técnico de unidades dentales
+                </h2>
+
+                <p class="mat">
+                    Mantenimiento, reparación y revisión profesional
+                    de equipos odontológicos.
+                </p>
+
+                <a href="https://wa.me/51907082563"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="info">
+                    <span class="rie">Solicitar servicio</span>
+                </a>
             </div>
-            <a href="https://wa.me/51907082563" target="_blank" class="enlace"><div class="for">
-            <div class="info">Solicitar Servicio</div>
-        </div></a>
-        </div>
-    </div>
+        </section>
 
-    <div class="tercero">
-        <div class="grupo">
-        <div class="nues">NUESTROS SERVICIOS</div>
-        <div class="ofrezco">¿Qué ofrecemos?</div>
-        <div class="brindamos">Brindamos servicio técnico especializado en equipos dentales de todas las marcas.</div>
-        </div>
-        <div class="lateral">
-        <div class="herra"></div>
-        <div class="inclu">Servicios Incluidos</div>  
-        <div class="cam">Cambio de mangueras • Reparación de sistema hidráulico • Ajustes eléctricos • Revisión completa del equipo • Calibración y diagnóstico técnico</div>
-        </div>
-        <div class="carta">
-            <div class="mantenimiento"></div>
-            <div class="man">Mantenimiento</div>
-            <div class="descri">Previene averías y prolonga la vida útil de tus equipos</div>
+        <!-- SERVICIOS -->
+        <section class="tercero" id="servicios">
 
-        </div>
+            <div class="grupo">
+                <p class="nues">NUESTROS SERVICIOS</p>
 
-        <div class="listado">
-            <div class="lis"></div>
-            <div class="revision">
-Revisión General
-            </div>
-            <div class="diagnostico">
-Diagnóstico completo para un mejor rendimiento
-            </div>
-        </div>
-    </div>
+                <h2 class="ofrezco">¿Qué ofrecemos?</h2>
 
-
-<div class="cuarto">
-
-    
-    <div class="completa">
-        <div class="foto"></div>
-    </div>
-
-    
-    <div class="ver">
-
-
-        <div class="doce">
-            <div class="sobre">SOBRE NOSOTROS</div>
-
-            <div class="expe">
-                Experiencia y compromiso con tu equipo dental
-            </div>
-
-            <div class="conta">
-                Contamos con la experiencia y el conocimiento técnico
-                para brindar un servicio confiable y eficiente.
-                Nuestro objetivo es minimizar el tiempo de inactividad
-                de tu equipo y asegurar el mejor funcionamiento
-                en tu consultorio.
-            </div>
-        </div>
-
-    
-        <div class="abajo">
-            <div class="dim">
-                <div class="traba">Trabajo garantizado</div>
+                <p class="brindamos">
+                    Brindamos servicio técnico especializado en
+                    equipos dentales de distintas marcas. Consulta
+                    también por nuestras compresoras odontológicas.
+                </p>
             </div>
 
-            <div class="ate">
-                <div class="aten">Atención rápida</div>
+            <article class="lateral">
+                <div class="herra" aria-hidden="true"></div>
+
+                <h3 class="inclu">Servicios incluidos</h3>
+
+                <p class="cam">
+                    Cambio de mangueras · Reparación de sistema
+                    hidráulico · Ajustes eléctricos · Revisión
+                    del equipo · Diagnóstico técnico.
+                </p>
+            </article>
+
+            <article class="carta">
+                <div class="mantenimiento" aria-hidden="true"></div>
+
+                <h3 class="man">Mantenimiento</h3>
+
+                <p class="descri">
+                    Ayuda a prevenir averías y prolongar la vida
+                    útil de tus equipos.
+                </p>
+            </article>
+
+            <article class="listado">
+                <div class="lis" aria-hidden="true"></div>
+
+                <h3 class="revision">Revisión general</h3>
+
+                <p class="diagnostico">
+                    Diagnóstico técnico para conocer el estado
+                    y el rendimiento del equipo.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="cuarto" id="nosotros">
+
+            <div class="completa">
+                <div class="foto"
+                     role="img"
+                     aria-label="Fotografía de trabajo técnico"></div>
             </div>
+
+            <div class="ver">
+
+                <div class="doce">
+                    <p class="sobre">SOBRE NOSOTROS</p>
+
+                    <h2 class="expe">
+                        Experiencia y compromiso con tu equipo dental
+                    </h2>
+
+                    <p class="conta">
+                        Contamos con experiencia y conocimiento técnico
+                        para brindar un servicio confiable y eficiente.
+                        Nuestro objetivo es ayudar a mantener tus
+                        equipos en funcionamiento y reducir el tiempo
+                        de inactividad en tu consultorio.
+                    </p>
+                </div>
+
+                <div class="abajo">
+
+                    <div class="dim">
+                        <p class="traba">Trabajo responsable</p>
+                    </div>
+
+                    <div class="ate">
+                        <p class="aten">Atención rápida</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sextu" id="contacto">
+
+        <div class="contenedorama">
+
+            <!-- COLUMNA 1: CONTACTO -->
+            <section class="contactosxd">
+
+                <h2 class="clan">Contacto</h2>
+
+                <div class="jie">
+
+                    <a class="contacto-item"
+                       href="https://wa.me/519907082563"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="icono-contacto">◉</span>
+                        <span>WhatsApp</span>
+                    </a>
+
+                    <a class="contacto-item"
+                       href="tel:+51907082563">
+                        <span class="icono-contacto">☎</span>
+                        <span>Teléfono</span>
+                    </a>
+
+                    <a class="contacto-item"
+                       href="mailto:jim_arce@hotmail.com"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="icono-contacto">✉</span>
+                        <span>Consultas</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- COLUMNA 2: UBICACIÓN -->
+            <section class="encuentr">
+
+                <h2 class="giler">Encuéntranos</h2>
+
+                <div class="jjoel">
+
+                    <div class="ubicacion-dato">
+                        <div class="ieden" aria-hidden="true"></div>
+
+                        <p class="oyeo">
+                            Progreso 464, Comas 15328, Perú
+                        </p>
+                    </div>
+
+                    <div class="ubicacion-dato">
+                        <span class="icono-contactoo"></span>
+
+                        <p class="woeoe">
+                            Horario: consultar por WhatsApp
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- COLUMNA 3: REDES SOCIALES -->
+            <section class="boqueo">
+
+                <h2 class="xd">Redes sociales</h2>
+
+                <div class="redeslo">
+
+                    <a class="yase"
+                       href="https://www.instagram.com/unidades_arce/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <span class="insta"></span>
+                    </a>
+
+                    <a class="facebook"
+                       href="https://www.facebook.com/D.ARCE.unidadesdentales"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <span class="face"></span>
+                    </a>
+
+                    <a class="wee"
+                       href="https://wa.me/51907082563"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="WhatsApp">
+                        <span class="wasa"></span>
+                    </a>
+
+                </div>
+
+                <p class="texto-redes">
+                    Síguenos para conocer nuestros trabajos y servicios.
+                </p>
+
+            </section>
+
         </div>
 
-    </div>
+        <div class="pie-final">
+            <p>© 2026 D.ARCE. Todos los derechos reservados.</p>
+        </div>
 
-</div>
-    </div>
+    </footer>
 
-
-    <div class="sextu">
-        <div class="xd">Redes Sociales</div>
-        <div class="yase">
-        <a href="https://www.instagram.com/unidades_arce?fbclid=IwY2xjawU5O1xleHRuA2FlbQIxMABwZG9mAWJyaWQRMXJ2SGVFV1dza01rbzZCY1FzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEewJmqYstD_6UZQYVauLsyCQD5eMUT96XEwcSjsnoIY8CEZRO78vQDDdOTGMg_aem_9H97LXzMd9G9JhQS7uaUfQ"><div class="insta"></div></a></div>
-        <div class="facebook">
-        <a href="https://www.facebook.com/D.ARCE.unidadesdentales"><div class="face"></div>
-        </a></div>
-        <div class="wee"><a href="https://wa.me/51907082563" target="_blank"><div class="wasa"></div></a></div>
-        <div class="ubicacion">Progreso 464, Comas 15328, Perú</div> 
-    </div>
 </body>
 </html>
