@@ -1,9 +1,15 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
 body {
@@ -17,6 +23,20 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 3px solid #75c3ff;
+    outline-offset: 4px;
+}
+
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
 .inicio {
     width: 100%;
     min-height: 90px;
@@ -24,19 +44,24 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    gap: 22px;
     background: #fff;
 }
 
 .imagen {
-    background-image: url("uni.png");
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
+    background: url("uni.png") left center / contain no-repeat;
     width: 210px;
     min-width: 150px;
     height: 70px;
     flex: 1 1 190px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
 .home,
@@ -45,31 +70,47 @@ img {
 .gale,
 .contac {
     margin: 0;
-    height: auto;
-    flex: 0 0 auto;
-    white-space: nowrap;
     color: #17233b;
     font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+
+.home:hover,
+.servi:hover,
+.noso:hover,
+.gale:hover,
+.contac:hover {
+    color: #1685d1;
 }
 
 .contactanos {
-    background-image: url("contacto.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: block;
+    background: url("contacto.png") center / contain no-repeat;
     width: 125px;
     height: 55px;
     flex: 0 0 125px;
-    margin: 0;
 }
+
+
+/* =====================================
+   PORTADA
+===================================== */
 
 .imag {
     width: 100%;
     min-height: 340px;
-    padding: 32px clamp(20px, 5vw, 75px);
+    padding: 45px clamp(20px, 5vw, 75px);
+
     background:
-        linear-gradient(to right, rgba(10, 15, 75, .95), rgba(10, 15, 75, .45)),
+        linear-gradient(
+            to right,
+            rgba(10, 15, 75, .95),
+            rgba(10, 15, 75, .45)
+        ),
         url("silla.png") center / cover no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,18 +121,16 @@ img {
 .tecnico {
     color: #7CC8FF;
     width: 100%;
-    height: auto;
-    padding: 0;
+    margin: 0;
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 .reparacion {
     color: white;
     width: min(760px, 100%);
-    height: auto;
-    padding: 0;
     margin: 0;
     font-size: clamp(30px, 4.2vw, 52px);
     line-height: 1.15;
@@ -100,35 +139,37 @@ img {
 .soluciones {
     color: white;
     width: min(600px, 100%);
-    height: auto;
-    padding: 0;
     margin: 0;
     font-size: clamp(15px, 1.7vw, 18px);
     line-height: 1.6;
 }
 
-span {
+.reparacion span {
     color: #7CC8FF;
 }
 
 
+/* =====================================
+   LLAMADA A LA ACCIÓN
+===================================== */
+
 .quinto {
     width: 100%;
-    height: auto;
     padding: 20px;
-    border: 0;
 }
 
 .cajota {
     width: 100%;
     max-width: 1100px;
     min-height: 300px;
-    height: auto;
     margin: 0 auto;
     padding: 40px 25px;
-    background-color: rgb(12, 12, 94);
+
+    background-color: #0c0c5e;
     border-radius: 12px;
+
     text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +178,6 @@ span {
 
 .tec {
     color: white;
-    padding: 0;
     margin: 0 0 18px;
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.25;
@@ -145,42 +185,48 @@ span {
 
 .mat {
     color: white;
-    padding: 0;
     margin: 0 0 24px;
     max-width: 700px;
     font-size: clamp(16px, 2vw, 20px);
     line-height: 1.5;
 }
 
-.for {
+.info {
     background-color: #75C3FF;
     border-radius: 10px;
     width: 180px;
     min-height: 50px;
+    padding: 12px 18px;
     margin: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.info {
-    width: auto;
-    height: auto;
-    padding: 0;
-    font-size: 18px;
-    color: #000;
-    text-align: center;
-}
-
-.enlace {
     text-decoration: none;
+    transition: transform .2s ease, background-color .2s ease;
 }
 
+.info:hover {
+    background-color: #9bd5ff;
+    transform: translateY(-3px);
+}
+
+.rie {
+    color: #111827;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   SERVICIOS
+===================================== */
 
 .tercero {
     width: 100%;
-    height: auto;
-    padding: 35px 4%;
+    padding: 40px 4%;
+
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
@@ -193,18 +239,14 @@ span {
 }
 
 .nues {
-    width: auto;
-    height: auto;
-    padding: 0;
     margin: 0 0 12px;
     font-size: 12px;
     color: #4E7EA6;
+    font-weight: bold;
+    letter-spacing: .5px;
 }
 
 .ofrezco {
-    width: auto;
-    height: auto;
-    padding: 0;
     margin: 0 0 12px;
     font-weight: bold;
     font-size: clamp(23px, 2.2vw, 30px);
@@ -212,26 +254,35 @@ span {
 }
 
 .brindamos {
-    width: auto;
-    height: auto;
-    padding: 0;
     margin: 0;
     color: #4B61A6;
     line-height: 1.6;
     font-size: 15px;
 }
 
-.lateral,
 .carta,
-.listado {
+.listado,
+.lateral {
     min-width: 0;
     margin: 0;
-    padding: 20px 15px;
+    padding: 22px 16px;
+
     background-color: #E7F2EC;
     border-radius: 12px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.carta:hover,
+.listado:hover,
+.lateral:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(23, 35, 59, .10);
 }
 
 .herra,
@@ -240,14 +291,16 @@ span {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 90px;
-    height: 75px;
-    margin: 0 auto 12px;
+    width: 95px;
+    height: 80px;
+    margin: 0 auto 14px;
     flex: 0 0 auto;
 }
 
 .herra {
     background-image: url("herramienta.png");
+    width: 110px;
+    height: 97px;
 }
 
 .mantenimiento {
@@ -275,18 +328,22 @@ span {
     text-align: center;
     font-size: 13px;
     color: #4B61A6;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 
+/* =====================================
+   SOBRE NOSOTROS
+===================================== */
+
 .cuarto {
     width: 100%;
-    height: auto;
-    padding: 30px 5%;
+    padding: 40px 5%;
+
     display: flex;
     align-items: center;
     gap: 35px;
-    border: 0;
+
     background-color: #E7F2EC;
 }
 
@@ -296,10 +353,7 @@ span {
 }
 
 .foto {
-    background-image: url("foto.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("foto.jpg") center / contain no-repeat;
     width: 100%;
     min-height: 280px;
     aspect-ratio: 1 / 1;
@@ -308,6 +362,7 @@ span {
 .ver {
     flex: 1 1 58%;
     min-width: 0;
+
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -324,47 +379,34 @@ span {
     margin: 0 0 15px;
     font-size: clamp(25px, 3vw, 36px);
     font-weight: bold;
-    width: 100%;
     line-height: 1.2;
 }
 
 .conta {
     margin: 0;
     font-size: 16px;
-    width: 100%;
     line-height: 1.7;
 }
 
 .abajo {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
 }
 
-
-.ate {
-    background-size: contain;
+.ate,
+.dim {
+    background-size: 48px auto;
     background-position: left center;
     background-repeat: no-repeat;
+
     min-height: 80px;
     margin: 0;
-    padding: 8px 0 8px 65px;
+    padding: 8px 0 8px 60px;
+
     display: flex;
     align-items: center;
     flex: 1 1 190px;
-}
-
-.dim {
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
-    min-height: 150px;
-    margin: 0;
-    padding: 8px 0 8px 65px;
-    display: flex;
-    align-items: center;
-    flex: 1 1 190px;
-
 }
 
 .dim {
@@ -373,65 +415,205 @@ span {
 
 .ate {
     background-image: url("reloj.png");
-    background-size: contain;
-    width: 90px;
-    height: 90px;
-    margin-top: 26px;
 }
 
-.aten {
-    margin: 0;
-    width: auto;
-    font-weight: bold;
-    line-height: 1.4;
-    margin-left: 22px;
-}
-
+.aten,
 .traba {
     margin: 0;
-    width: auto;
     font-weight: bold;
     line-height: 1.4;
-    margin-left: 15px;
 }
+
+
+/* =====================================
+   GALERÍA
+===================================== */
+
+.galeria {
+    width: 100%;
+    padding: 40px 5%;
+}
+
+.galeria .expe {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
 
 .sextu {
     width: 100%;
-    min-height: 200px;
-    height: auto;
-    padding: 25px 5%;
+    margin: 0;
+    padding: 0;
     background-color: #002F5C;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(80px, 150px));
-    align-items: center;
-    gap: 12px 20px;
+    color: white;
 }
 
+/*
+   Este contenedor comienza en el borde izquierdo
+   del footer y la línea superior abarca todo su ancho.
+*/
+
+.contenedorama {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 32px 5%;
+
+    border-top: 2px solid white;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 35px;
+}
+
+/* Títulos de las tres columnas */
+
+.clan,
+.giler,
 .xd {
     color: white;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.clan,
+.giler {
+    line-height: 1.3;
+}
+
+.xd p {
+    margin: 0;
+}
+
+/* Evita que las columnas se salgan */
+
+.contactosxd,
+.encuentr,
+.boqueo {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+/* CONTACTO: dos columnas */
+
+.jie {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px 12px;
+}
+
+.contacto-item {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #E2E8F0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    transition: color .2s ease;
+}
+
+.contacto-item:hover,
+.como-llegar:hover {
+    color: #75C3FF;
+}
+
+.icono-contacto {
+    color: #75C3FF;
+    font-size: 19px;
+    flex: 0 0 auto;
+}
+
+/* UBICACIÓN */
+
+.jjoel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.ubicacion-dato {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: #E2E8F0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ubicacion-dato p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.oyeo,
+.woeoe {
+    padding: 0;
+}
+
+.ieden {
+    background: url("logoubi.png") left top / contain no-repeat;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+}
+
+.icono-contactoo {
+    background: url("logoobu.png") left top / contain no-repeat;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+}
+
+
+/* REDES SOCIALES */
+
+.redeslo {
+    width: 100%;
     padding: 0;
     margin: 0;
-    font-size: 26px;
-    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 17px;
 }
 
 .yase,
 .facebook,
 .wee {
     display: block;
-    min-width: 0px;
+    flex: 0 0 auto;
+    margin: 0;
 }
 
 .insta,
 .face,
 .wasa {
+    display: block;
     background-size: contain;
-    background-position: left center;
+    background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    max-width: 150px;
-    height: 50px;
+
+    width: 48px;
+    height: 48px;
     margin: 0;
+
+    transition: transform .2s ease;
 }
 
 .insta {
@@ -440,23 +622,48 @@ span {
 
 .face {
     background-image: url("face.png");
-    margin: 0 0 0 -90px;
 }
 
 .wasa {
     background-image: url("waza.png");
-    margin: 0 0 0 -180px;
 }
 
-.ubicacion {
-    color: white;
-    padding: 0;
-    margin: 10px 0 0;
-    text-decoration: overline;
-    grid-column: 1 / -1;
+.insta:hover,
+.face:hover,
+.wasa:hover {
+    transform: translateY(-4px) scale(1.05);
 }
+
+.texto-redes {
+    margin: 18px 0 0;
+    color: #CBD5E1;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* COPYRIGHT */
+
+.pie-final {
+    width: 100%;
+    padding: 17px 5%;
+    border-top: 1px solid rgba(255, 255, 255, .22);
+    text-align: center;
+}
+
+.pie-final p {
+    margin: 0;
+    color: #CBD5E1;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   TABLETS
+===================================== */
 
 @media (max-width: 900px) {
+
     .inicio {
         flex-wrap: wrap;
         justify-content: center;
@@ -471,6 +678,10 @@ span {
         background-position: center;
     }
 
+    .menu {
+        gap: 18px;
+    }
+
     .tercero {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -482,19 +693,56 @@ span {
     .foto {
         min-height: 220px;
     }
+
+    .contenedorama {
+        gap: 22px;
+        padding: 28px 3%;
+    }
+
+    .jie {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px 8px;
+    }
+
+    .contacto-item {
+        font-size: 13px;
+    }
+
+    .insta,
+    .face,
+    .wasa {
+        width: 42px;
+        height: 42px;
+    }
 }
 
+
+/* =====================================
+   CELULARES
+===================================== */
+
 @media (max-width: 600px) {
+
     .inicio {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 15px 12px;
+        justify-content: center;
+        gap: 14px 12px;
         padding: 12px;
     }
 
     .imagen {
-        flex-basis: 100%;
+        flex: 1 0 100%;
+        width: 180px;
         height: 55px;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 12px;
     }
 
     .home,
@@ -508,7 +756,7 @@ span {
     .contactanos {
         width: 115px;
         height: 48px;
-        flex-basis: 115px;
+        flex: 0 0 115px;
     }
 
     .imag {
@@ -549,8 +797,8 @@ span {
 
     .tercero {
         grid-template-columns: 1fr;
-        padding: 25px 18px;
-        gap: 15px;
+        padding: 28px 18px;
+        gap: 16px;
     }
 
     .grupo {
@@ -569,8 +817,8 @@ span {
 
     .cuarto {
         flex-direction: column;
-        padding: 25px 20px;
-        gap: 20px;
+        padding: 28px 20px;
+        gap: 22px;
     }
 
     .completa,
@@ -598,42 +846,75 @@ span {
         gap: 10px;
     }
 
-    .ate {
-        flex-basis: auto;
-        min-height: 65px;
-    }
-
-    
-
+    .ate,
     .dim {
         flex-basis: auto;
-        min-height: 160px;
+        min-width: 0;
+        min-height: 75px;
     }
 
-    .sextu {
-        padding: 25px 20px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+    .galeria {
+        padding: 30px 20px;
     }
 
+    /* Footer: las tres columnas se apilan en móvil */
+
+    .contenedorama {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 28px 22px;
+    }
+
+    .clan,
+    .giler,
     .xd {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    /* Contacto sigue teniendo dos columnas */
+
+    .jie {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+    }
+
+    .contacto-item {
+        font-size: 14px;
+    }
+
+    .ubicacion-dato {
+        font-size: 14px;
+    }
+
+    .redeslo {
+        gap: 18px;
     }
 
     .insta,
     .face,
     .wasa {
-        height: 42px;
+        width: 44px;
+        height: 44px;
     }
 
-    .ubicacion {
-        font-size: 13px;
-        line-height: 1.5;
+    .pie-final {
+        padding: 16px 20px;
     }
 }
 
+
+/* =====================================
+    CELULARES MUY PEQUEÑOS
+===================================== */
+
 @media (max-width: 360px) {
+
     .inicio {
+        gap: 12px 9px;
+    }
+
+    .menu {
         gap: 12px 9px;
     }
 
@@ -654,8 +935,34 @@ span {
         font-size: 27px;
     }
 
-    .sextu {
-        padding: 20px 12px;
-        gap: 8px;
+    .contenedorama {
+        padding: 25px 15px;
+    }
+
+    .jie {
+        gap: 15px 8px;
+    }
+
+    .contacto-item {
+        font-size: 12px;
     }
 }
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
